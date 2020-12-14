@@ -7,7 +7,7 @@
 				<th>Status</th>
 				<th>Details</th>
 			</tr>
-			<tr *ngFor="let order in orderList$ | async">
+			<tr *ngFor="let order of orderList$ | async">
 				<td>{{order.name}}</td>
 				<td>{{order.qty}}</td>
 				<td>{{order.status | orderStatus}}</td>
