@@ -1,0 +1,17 @@
+<div class="tab-pane" id="settings">
+	<table class="table">
+		<tbody>
+			<tr>
+				<th>Name</th>
+				<th>Quantity</th>
+				<th>Status</th>
+				<th>Details</th>
+			</tr>
+			<tr *ngFor="let order in orderList$ | async">
+				<td>{{order.name}}</td>
+				<td>{{order.qty}}</td>
+				<td>{{order.status | orderStatus}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
