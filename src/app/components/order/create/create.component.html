@@ -1,0 +1,24 @@
+<form [formGroupName]="form" (onSubmit)="createOrder">
+	<div class="row">
+		<div class="col-md-4">
+			<mat-form-field class="example-full-width">
+				<input matInput placeholder="Name" type="text" formControlName="name">
+      </mat-form-field>
+		</div>
+		<div class="col-md-3">
+			<mat-form-field class="example-full-width">
+				<mat-select placeholder="Qty" formControlName="qty">
+					<mat-option *ngFor="let value of quantities" [value]="value">{{value}}</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
+		<div class="col-md-5">
+			<mat-form-field class="example-full-width">
+				<mat-input matInput placeholder="Address" type="number" formControlName="qty">
+			</mat-form-field>
+		</div>
+	</div>
+	<button mat-raised-button type="submit" class="btn btn-danger pull-right">Save</button>
+	<button mat-raised-button type="reset" class="btn btn-danger pull-right" (onClick)="reset()">Cancel</button>
+	<div class="clearfix"></div>
+</form>
